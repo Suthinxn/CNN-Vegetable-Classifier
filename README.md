@@ -42,7 +42,7 @@ miniproject รายวิชา 241-202 MACHINE LEARNING II
 - **Linux**:
  `./scripts/run-web`
 
--**maxOS**:
+- **maxOS**:
  `../scripts/run-web`  
  
  - หมายเหตุ: ตรวจสอบว่าไฟล์ `run-web` มีสิทธิ์ในการรัน (ถ้าไม่มี ให้ใช้ `chmod +x scripts/run-web`) 
