@@ -41,6 +41,7 @@ miniproject รายวิชา 241-202 MACHINE LEARNING II
 รันสคริปต์เพื่อเริ่มต้นเว็บแอปพลิเคชัน:
 - **Linux**:
  `./scripts/run-web`
+
 -**maxOS**:
  `../scripts/run-web`  
  
