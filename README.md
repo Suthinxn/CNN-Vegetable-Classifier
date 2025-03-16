@@ -1,6 +1,12 @@
 # CNN-Vegetable-Classifier
 
+
 6610110341 สุธินันท์ รองพล
+
+miniproject รายวิชา 241-202 MACHINE LEARNING II
+
+โปรเจคนี้พัฒนาระบบจำแนกผัก 15 ชนิด (Bean, Bitter_Gourd, Bottle_Gourd, Brinjal, Broccoli, Cabbage, Capsicum, Carrot, Cauliflower, Cucumber, Papaya, Potato, Pumpkin, Radish, Tomato) โดยใช้ Convolutional Neural Networks (CNNs) เพื่อสร้างโมเดลการทำนายที่มีประสิทธิภาพ เว็บไซต์ที่พัฒนาขึ้นช่วยให้ผู้ใช้สามารถอัปโหลดรูปภาพผัก จากนั้นโมเดลจะวิเคราะห์และแสดงผลลัพธ์การจำแนกประเภทผักพร้อมระดับความมั่นใจในการทำนายอย่างชัดเจนและใช้งานง่าย
+
 
 [Dataset](https://www.kaggle.com/datasets/misrakahmed/vegetable-image-dataset)
 
