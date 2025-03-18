@@ -1,0 +1,4 @@
+#!/bin/sh
+
+
+FLASK_DEBUG=true poetry run cnn_vegetable_classifier-web -H 0.0.0.0 -d

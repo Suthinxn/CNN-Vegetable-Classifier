@@ -1,0 +1,66 @@
+{% extends "/base/default-page.html" %}
+{% block content %} 
+<div class="ui container" style="height: 100%;">
+  <h2 class="ui green icon header" style="font-size: 3em; margin-top: 5vh; text-align: center; width: 100%;">
+    <div class="content" style="margin-top: 2vh;">
+      CNN Classifier Vegetable
+    </div>
+  </h2>
+  <div class="column">
+    <form class="ui large form" method="post" enctype="multipart/form-data">
+      {{ form.csrf_token }}
+      <div class="field">
+        <label>Upload Your Vegetable Image</label>
+        <div class="ui file action input">
+          {{ form.image() }}
+          <label for="{{ form.image.id }}" class="ui green button" style="justify-content: center !important; display:flex;">
+            <i class="seedling icon" style="visibility: visible;"></i>
+              {{ form.image.label }}
+          </label>
+        </div>
+      </div> 
+        <button class="ui green primary button" type="submit" style="width: 100%;">
+          Save
+        </button>
+    </form>
+  </div>
+
+  <div class="ui divider"></div>
+
+  <h3 class="ui header">Vegetable</h3>
+  <table class="ui very basic table" style="text-align: center; vertical-align: middle;">
+    <tbody>
+      <tr>
+        <td>Bean</td>
+        <td>Bitter Gourd</td>
+        <td>Bottle Gourd</td>
+      </tr>
+      <tr>
+        <td>Brinjal</td>
+        <td>Broccoli</td>
+        <td>Cabbage</td>
+      </tr>
+      <tr>
+        <td>Capsicum</td>
+        <td>Carrot</td>
+        <td>Cauliflower</td>
+      </tr>
+      <tr>
+        <td>Cucumber</td>
+        <td>Papaya</td>
+        <td>Potato</td>
+      </tr>
+      <tr>
+        <td>Pumpkin</td>
+        <td>Radish</td>
+        <td>Tomato</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+
+
+{% endblock content%}

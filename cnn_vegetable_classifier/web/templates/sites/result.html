@@ -1,0 +1,90 @@
+{% extends "/base/default-page.html" %}
+{% block content %}
+<style>
+	#myChart {
+	  height: 70vh !important;
+	}
+</style>
+  
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div class="ui container" style="height: 100%;">
+	<h2 class="ui green icon header" style="font-size: 3em; margin-top: 5vh; width: 100%;">
+		<div class="content" style="margin-top: 2vh;">
+		  CNN Classifier Vegetable
+		</div>
+	</h2>
+
+  <div class="ui divider"></div>
+
+  <h1 class="ui header">
+    Result :
+  </h1>
+<div class="ui horizontal segments">
+  <div class="ui segment">
+    <div class="content">
+      <div class="image" style="text-align: center;">
+        <img src="/image/{{ classifier_id }}" alt="Classifier Image" style="width: 300px; height: 200px; object-fit: cover;">
+      </div>
+    </div>
+  </div>
+  <div class="ui segment">
+    <h1 class="ui header">
+      Predicted : {{ predicted_label }}
+    </h1>
+  
+    <h3 class="ui header">
+      Confidence :
+    </h3>
+    <div class="ui teal progress" data-percent="{{ confidence*100 }}" id="example1">
+      <div class="bar"></div>
+      <div class="label">{{ "%.2f"|format(confidence * 100) }}%</div>
+    </div>
+    
+  </div>
+</div>
+
+
+<h1 class="ui header">
+  PredictionChart :
+</h1>
+<div class="ui segment" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+  <canvas id="myChart" width="400" height="300"></canvas>
+</div>
+
+<div style="height: 5em;">
+  <a class="ui green button" href="{{ url_for('site.index')}}" style="width: 100%;">ตกลง</a>
+</div>
+
+</div>
+{% endblock content%}
+
+{% block additional_js %}
+<script>
+	$('#example1').progress();
+</script>
+
+<script>
+		var ctx = document.getElementById('myChart').getContext('2d');
+		var myChart = new Chart(ctx, {
+				type: 'bar',
+				data: {
+						labels: {{ labels | tojson }},
+						datasets: [{
+								label: 'Prediction Confidence',
+								data: {{ values | tojson }},
+								backgroundColor: 'rgba(75, 192, 192, 0.5)',
+								borderColor: 'rgba(75, 192, 192, 1)',
+								borderWidth: 1
+						}]
+				},
+				options: {
+						scales: {
+								y: {
+										beginAtZero: true,
+										max: 1
+								}
+						}
+				}
+		});
+</script>
+{% endblock additional_js %}

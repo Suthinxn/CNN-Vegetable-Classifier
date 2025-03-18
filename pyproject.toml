@@ -1,0 +1,36 @@
+[project]
+name = "cnn_vegetable_classifier"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "suthinan",email = "suthinan.rpn@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "flask (>=3.1.0,<4.0.0)",
+    "flask-login (>=0.6.3,<0.7.0)",
+    "mongoengine (>=0.29.1,<0.30.0)",
+    "werkzeug (>=3.1.3,<4.0.0)",
+    "flask-me (>=1.0.2,<2.0.0)",
+    "flask-caching (>=2.3.1,<3.0.0)",
+    "flask-bcrypt (>=1.0.1,<2.0.0)",
+    "flask-wtf (>=1.2.2,<2.0.0)",
+    "numpy (<2.2.0)",
+    "tensorflow (>=2.18.0,<3.0.0)",
+    "tensorflow-keras (>=0.1,<0.2)",
+    "matplotlib (>=3.10.1,<4.0.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)"
+]
+
+[tool.poetry.scripts]
+cnn_vegetable_classifier-web = "cnn_vegetable_classifier.cmd.web:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^3.9.2"
+

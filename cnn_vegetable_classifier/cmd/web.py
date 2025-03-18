@@ -1,0 +1,10 @@
+from cnn_vegetable_classifier import web
+from pymongo import MongoClient, errors
+
+
+def main():
+   options = web.get_program_options()
+   app = web.create_app()
+
+
+   app.run(debug=options.debug, host=options.host, port=int(options.port))
