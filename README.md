@@ -37,10 +37,16 @@ miniproject รายวิชา 241-202 MACHINE LEARNING II
 	2. รันคำสั่ง:
 `npm install`
 
- ### 4. Run docker :
+
+ ### 4. ติดตั้ง Package :
+**Poetry** ซึ่งเป็นเครื่องมือจัดการแพ็กเกจและสภาพแวดล้อมเสมือน (virtual environment) สำหรับ **Python**
+รันคำสั่ง:
+`poetry install`
+
+ ### 5. Run docker :
 เปิดใช้งาน MongoDB ผ่าน Docker เพื่อรันฐานข้อมูล
 
- ### 5. Run the web application:
+ ### 6. Run the web application:
 รันสคริปต์เพื่อเริ่มต้นเว็บแอปพลิเคชัน:
 - **Linux**:
  `./scripts/run-web`
