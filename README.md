@@ -42,6 +42,7 @@ miniproject รายวิชา 241-202 MACHINE LEARNING II
 **Poetry** ซึ่งเป็นเครื่องมือจัดการแพ็กเกจและสภาพแวดล้อมเสมือน (virtual environment) สำหรับ **Python**
 
 รันคำสั่ง:
+
 `poetry install`
 
  ### 5. Run docker :
