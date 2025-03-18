@@ -40,6 +40,7 @@ miniproject รายวิชา 241-202 MACHINE LEARNING II
 
  ### 4. ติดตั้ง Package :
 **Poetry** ซึ่งเป็นเครื่องมือจัดการแพ็กเกจและสภาพแวดล้อมเสมือน (virtual environment) สำหรับ **Python**
+
 รันคำสั่ง:
 `poetry install`
 
