@@ -15,6 +15,8 @@ module = Blueprint("site", __name__)
 # โหลดโมเดล CNN
 base_dir = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(base_dir, "..", "views", "CNNs_model.h5")
+# model_path = os.path.join(base_dir, "..", "views", "model_4layer.h5")
+
 
 if not os.path.exists(model_path):
     raise FileNotFoundError(f"Model file not found at: {model_path}")
